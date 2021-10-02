@@ -1,7 +1,9 @@
 # Oneway's blog with Django
 
-Implementing features to get familiar with Django framework
-
+***
+Objectives
+- Implementing features to familiarize myself with the Django framework
+***
 Features
  - Board (Dynamic URL routing)
  - 
