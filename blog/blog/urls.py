@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('posts.urls'))
+    path('', include('posts.urls')),
+    path('weather/', include('weather.urls')),    # everything that starts with app2 urls， to app2 (app the name ) the urls. py to deal with
+
 ]
