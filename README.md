@@ -6,6 +6,10 @@ Objectives
 ***
 Features
  - Main page
- - 회원가입
- - 로그인/로그아웃
- - 게시판 (Dynamic URL routing)
+ - Register
+ - Login/Logout
+ - Board (Dynamic URL routing)
+
+Working on
+ - Searching Weather
+ - Library (BeautifulSoup)
