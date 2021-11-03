@@ -11,5 +11,5 @@ Features
  - Board (Dynamic URL routing)
 
 Working on
- - Searching Weather
+ - Searching Weather(Weather API - OpenWeatherMap)
  - Library (BeautifulSoup)
