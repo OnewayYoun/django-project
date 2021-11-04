@@ -85,18 +85,19 @@ body {
 .topnav-right {
   float: right;
 }
+
 </style>
 
 <body>
 
 <div class="topnav">
-  <a class="active" href="/">Home</a>
-<!--  <a href="#news">News</a>-->
-<!--  <a href="#contact">Contact</a>-->
-<!--  <div class="topnav-right">-->
-<!--    <a href="#search">Search</a>-->
-<!--    <a href="#about">About</a>-->
-<!--  </div>-->
+    <a class="active" href="/">Home</a>
+    <!--  <a href="#news">News</a>-->
+    <!--  <a href="#contact">Contact</a>-->
+    <!--  <div class="topnav-right">-->
+    <!--    <a href="#search">Search</a>-->
+    <!--    <a href="#about">About</a>-->
+    <!--  </div>-->
 </div>
 
 <nav class="row" style="background: grey;color: white;margin-right: 0px;margin-left: 0px;">
@@ -117,15 +118,21 @@ body {
             <form>
 </center>
 <div class="row">
-    <h1 style="text-align:center;">{{city}}</h1>
+    <!--    <h1 style="text-align:center;">{{city}}</h1>-->
     {% if data.country_code %}
     <div class="col-md-6 col-md-offset-3">
         <h1>{{city}}</h1>
-        <h3>country code : {{data.country_code}}</h3>
-            <h5>coordinate : {{data.coordinate}}</h5>
-            <h5>temp : {{data.temp}}</h5>
-            <h5>pressure : {{data.pressure}} </h5>
-            <h5>humidity : {{data.humidity}}</h5>
+        <ul>
+            <li>temp : {{data.temp}}</li>
+            <li>pressure : {{data.pressure}}</li>
+            <li>humidity : {{data.humidity}}</li>
+            <li>coordinate : {{data.coordinate}}</li>
+        </ul>
+        <h3>&ensp;&nbsp;&nbsp;country code : {{data.country_code}}</h3>
+    </div>
+    {% elif message %}
+    <div class="col-md-6 col-md-offset-3">
+        <h1>&emsp;&emsp;{{message}}</h1>
     </div>
     {% endif %}
 </div>
