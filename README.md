@@ -7,9 +7,9 @@ Objectives
 Features
  - Main page
  - Register
- - Login/Logout
+ - Login/Logout (Session Cookie)
  - Board (Dynamic URL routing)
-
+ - Searching Weather (Weather API - OpenWeatherMap)
+***
 Working on
- - Searching Weather(Weather API - OpenWeatherMap)
- - Library (BeautifulSoup)
+ - Library, DB Design (BeautifulSoup, Search API - MediaWiki)
