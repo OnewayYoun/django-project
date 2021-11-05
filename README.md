@@ -13,3 +13,4 @@ Features
 ***
 Working on
  - Library, DB Design (BeautifulSoup, Search API - MediaWiki)
+ - Real Time Chat (DB)
