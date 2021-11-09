@@ -1,16 +1,19 @@
 # Oneway's blog with Django
 
-***
-Objectives
+## Objectives
 - Implementing features to familiarize myself with the Django framework
 ***
-Features
+## Features
  - Main page
- - Register
- - Login/Logout (Session Cookie)
+   - Register
+   - Login/Logout (Session Cookie)
  - Board (Dynamic URL routing)
  - Searching Weather (Weather API - OpenWeatherMap)
+ - Real Time Chat (DB, ajax)
 ***
-Working on
+## Working on
  - Library, DB Design (BeautifulSoup, Search API - MediaWiki)
- - Real Time Chat (DB)
+
+***
+#### stack
+- Django, Weather API(OpenWeatherMap), ajax
