@@ -1,4 +1,4 @@
-# Oneway's blog with Django
+# Oneway Web Portal with Django
 
 ## Objectives
 - Implementing features to familiarize myself with the Django framework
