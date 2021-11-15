@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import TestView
 
 
 urlpatterns = [
@@ -22,5 +23,7 @@ urlpatterns = [
     path('', include('posts.urls')),
     path('weather/', include('weather.urls')),    # everything that starts with app2 urls， to app2 (app the name ) the urls. py to deal with
     path('chat/', include('chat.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api', TestView.as_view(), name='test'),
 
 ]

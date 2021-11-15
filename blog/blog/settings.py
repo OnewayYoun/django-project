@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'weather',
     'onewayy',
     'chat',
+    'rest_framework',
 
 ]
 
