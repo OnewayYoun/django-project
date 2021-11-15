@@ -12,6 +12,7 @@
  - Real Time Chat (DB, ajax)
 ***
 ## Working on
+ - djangorestframework
  - Library, DB Design (BeautifulSoup, Search API - MediaWiki)
 
 ***
