@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'onewayy',
     'chat',
     'rest_framework',
+    'onewayydrf',
 
 ]
 
