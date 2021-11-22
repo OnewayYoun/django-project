@@ -81,7 +81,7 @@ body {
 <!--  <a href="#contact">Contact</a>-->
   <div class="topnav-right">
 <!--    <a href="#search">Search</a>-->
-    <a href="#post">post</a>
+    <a href="blog/write">post</a>
   </div>
 </div>
 
@@ -95,8 +95,8 @@ body {
     <div class="card">
       <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
         <h2>{{post.title}}</h2>
-        <h5>{{post.created_at}}</h5>
         <p>{{post.body|truncatewords:11}}</p>
+        <h5>{{username}}, {{post.created_at}}</h5>
       </a>
     </div>
     {% endfor %}

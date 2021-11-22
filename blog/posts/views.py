@@ -2,6 +2,7 @@ from django.contrib.auth.models import User, auth
 from django.shortcuts import render, redirect
 from .models import Post, Feature
 from django.contrib import messages
+from .forms import *
 
 
 # Create your views here.
@@ -59,11 +60,32 @@ def logout(request):
 
 
 def blog(request):
+    username = None
+    if request.user.username:
+        username = request.user.username
     posts = Post.objects.all()
-    return render(request, 'blog.html', dict(posts=posts))
+    return render(request, 'blog.html', dict(posts=posts, username=username))
     # return render(request, 'blog.html', {'posts': posts})
 
 
 def post(request, pk):
+    username = None
+    if request.user.username:
+        username = request.user.username
     posts = Post.objects.get(id=pk)
-    return render(request, 'post.html', dict(posts=posts))
+    return render(request, 'post.html', dict(posts=posts, username=username))
+
+
+def write(request):
+    username = None
+    if request.user.username:
+        username = request.user.username
+
+    if request.method == 'POST':
+        form = Form(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('blog')
+    else:
+        form = Form()
+    return render(request, 'write.html', {'form':form, 'username':username})
