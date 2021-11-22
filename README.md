@@ -2,7 +2,7 @@
 
 ## Objectives
 - Implementing features to familiarize myself with the Django framework
-***
+
 ## Features
  - Main page
    - Register
@@ -14,11 +14,10 @@
  - Searching Weather (Weather API - OpenWeatherMap)
    - Search Bar: Enter the name of the city you want to get weather information about
  - Real Time Chat (DB, ajax)
-   - Django Rest Framework
-     - Django REST API View Request and Response
-***
-## Working on
- 
+ - Django Rest Framework
+   - Django REST API View Request and Response
+
+## Working on 
  - Library, DB Design (BeautifulSoup, Search API - MediaWiki)
 
 ***
