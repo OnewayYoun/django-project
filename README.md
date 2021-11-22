@@ -2,7 +2,7 @@
 
 ## Objectives
 - Implementing features to familiarize myself with the Django framework
-
+<br>
 ## Features
  - Main page
    - Register
@@ -16,10 +16,10 @@
  - Real Time Chat (DB, ajax)
  - Django Rest Framework
    - Django REST API View Request and Response
-
+<br>
 ## Working on 
  - Library, DB Design (BeautifulSoup, Search API - MediaWiki)
-
+<br>
 ***
 #### stack
 - Django, Weather API(OpenWeatherMap), ajax
