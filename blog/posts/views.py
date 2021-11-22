@@ -3,11 +3,12 @@ from django.shortcuts import render, redirect
 from .models import Post, Feature
 from django.contrib import messages
 from .forms import *
+from django.http import HttpResponse
 
 
 # Create your views here.
 def home(request):
-    features = Feature.objects.all()    #getting all data(objects) from DB
+    features = Feature.objects.all()  # getting all data(objects) from DB
     return render(request, 'home.html', {'features': features})
 
 
@@ -60,32 +61,30 @@ def logout(request):
 
 
 def blog(request):
-    username = None
-    if request.user.username:
-        username = request.user.username
     posts = Post.objects.all()
-    return render(request, 'blog.html', dict(posts=posts, username=username))
+    return render(request, 'blog.html', dict(posts=posts))
     # return render(request, 'blog.html', {'posts': posts})
 
 
 def post(request, pk):
-    username = None
-    if request.user.username:
-        username = request.user.username
     posts = Post.objects.get(id=pk)
-    return render(request, 'post.html', dict(posts=posts, username=username))
+    return render(request, 'post.html', dict(posts=posts))
 
 
 def write(request):
-    username = None
-    if request.user.username:
+    if request.method == 'POST' and request.user.username:
         username = request.user.username
-
-    if request.method == 'POST':
+        # author = Post(author=username)
+        # form = Form(request.POST, instance=author)
         form = Form(request.POST)
         if form.is_valid():
-            form.save()
+            tmp = form.save(commit=False)
+            tmp.author = username
+            tmp.save()
             return redirect('blog')
+    elif not request.user.username:
+        messages.info(request, '로그인 후 글을 남길수 있습니다!')
+        return redirect('login')
     else:
         form = Form()
-    return render(request, 'write.html', {'form':form, 'username':username})
+    return render(request, 'write.html', {'form': form})

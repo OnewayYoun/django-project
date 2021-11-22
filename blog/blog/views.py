@@ -5,17 +5,18 @@ from chat.models import Room
 from onewayydrf.serializers import StudentSerializer
 from onewayydrf.models import Student
 
+"""
+def get(self, request, *args, **kwargs):
+    sample_data = dict(username='sample', active_years_for=10)
+    room_name = Room.objects.all()
+    sample = room_name.values()
+    # return Response(sample)
+    return Response(dict(name_of_room=list(sample)))
+    # return Response(sample_data)
+"""
+
 
 class TestView(APIView):
-    """
-    def get(self, request, *args, **kwargs):
-        sample_data = dict(username='sample', active_years_for=10)
-        room_name = Room.objects.all()
-        sample = room_name.values()
-        # return Response(sample)
-        return Response(dict(name_of_room=list(sample)))
-        # return Response(sample_data)
-    """
     def get(self, request, *args, **kwargs):
         qs = Student.objects.all()
         serializer = StudentSerializer(qs, many=True)
