@@ -32,4 +32,4 @@
 
 ***
 #### stack
-- Django, Weather API(OpenWeatherMap), ajax
+- Django, Django ORM, Weather API(OpenWeatherMap), AJAX
